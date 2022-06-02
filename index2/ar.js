@@ -1,6 +1,6 @@
 var options = {
     enableHighAccuracy: true,
-    timeout: 5000,
+    timeout: 50000,
     maximumAge: 0
   };
   
@@ -14,9 +14,7 @@ var options = {
   };
   
   function error(err) {
-    console.warn('ERROR(' + err.code + '): ' + err.message);
+    console.log("no geo")
   };
-  while (1)
-  {
-    navigator.geolocation.getCurrentPosition(success, error, options);
-  }
+  navigator.geolocation.getCurrentPosition(success, error, options);
+  
