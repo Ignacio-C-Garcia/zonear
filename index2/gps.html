@@ -27,8 +27,13 @@
                     src="assets/asset.glb"
                 ></a-asset-item>
             </a-assets>
-
-                <a-entity
+            <a-text
+            value="This content will always face you."
+            look-at="[gps-camera]"
+            scale="50 50 50"
+            gps-entity-place="latitude: -34.7888892; longitude: -56.078687;"
+          ></a-text>
+               <!-- <a-entity
                     star
                     look-at="[gps-camera]"
                     animation-mixer="loop: repeat"
@@ -36,7 +41,7 @@
                     scale="1 1 1"
                     gps-entity-place="latitude: -34.7888892; longitude: -56.078687;"
                     position="0 0.5 0"
-                ></a-entity>
+                ></a-entity>  -->
 
             
         </a-scene>
