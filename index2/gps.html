@@ -13,10 +13,11 @@
 
     <body style="margin: 0; overflow: hidden;">
         <a-scene
+        vr-mode-ui="enabled: false;"
             renderer="logarithmicDepthBuffer: true;"
             embedded
             loading-screen="enabled: false;"
-            arjs="sourceType: webcam; debugUIEnabled: false;"
+            arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
         >
         <a-camera gps-camera rotation-reader></a-camera>
         <a-entity light="color: #AFA; intensity: 1.5" position="-1 1 0"></a-entity>
@@ -32,9 +33,9 @@
                     look-at="[gps-camera]"
                     animation-mixer="loop: repeat"
                     gltf-model="#animated-asset"
-                    scale="0.2 0.2 -1"
+                    scale="1 1 1"
                     gps-entity-place="latitude: -34.7888892; longitude: -56.078687;"
-                    position="0 1.5 -1"
+                    position="0 0.5 0"
                 ></a-entity>
 
             
