@@ -69,3 +69,18 @@ AFRAME.registerComponent('checker', {
     console.log(this.el.object3D.position);
   }
 });
+
+AFRAME.registerComponent('checker', {
+  init: function () {
+    // `this.el` is the element.
+    // `object3D` is the three.js object.
+
+    // `rotation` is a three.js Euler using radians. `quaternion` also available.
+    window.addEventListener("deviceorientation",function(event) {
+      alpha = Math.round(event.alpha);
+      beta = Math.round(event.beta);
+      gamma = Math.round(event.gamma);
+    }, true);
+
+  }
+});
