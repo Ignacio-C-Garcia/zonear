@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZoneAR</title>
+</head>
+<body>
+    <h3>Geolocation:</h3>
+    <ul>
+        <li><a href="https://ignacio-c-garcia.github.io/zonear/geolocation/celebra/gps">Celebra</a></li>
+        <li><a href="https://ignacio-c-garcia.github.io/zonear/geolocation/coffee/gps">Coffee Point</a></li>
+        <li><a href="https://ignacio-c-garcia.github.io/zonear/geolocation/parada/gps">Parada Zona</a></li>
+    </ul>
+    <h3>Markers:</h3>
+    <ul>
+        <li><a href="https://ignacio-c-garcia.github.io/zonear/markers/kanji/marker">Cubo sobre kanji</a></li>
+    </ul>
+</body>
+</html>
