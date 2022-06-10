@@ -24,7 +24,15 @@
             <a-assets>
                 <a-asset-item
                     id="amongus_rojo"
-                    src="assets/asset.glb"
+                    src="assets/amongus_rojo.glb"
+                ></a-asset-item>
+                <a-asset-item
+                    id="amongus_amarillo"
+                    src="assets/amongus_amarillo.glb"
+                ></a-asset-item>
+                <a-asset-item
+                    id="amongus_verde"
+                    src="assets/amongus_verde.glb"
                 ></a-asset-item>
             </a-assets>
 
@@ -41,13 +49,13 @@
                     gltf-model="#amongus_rojo"
                     scale="10 10 10"
                     gps-entity-place="latitude: -34.782947; longitude: -56.0807658;"
-                    
+                    position="-1 0 0"
                 ></a-entity>
             <a-entity
                     star
                     look-at="[gps-camera]"
                     animation-mixer="loop: repeat"
-                    gltf-model="#animated-asset"
+                    gltf-model="#amongus_amarillo"
                     scale="10 10 10"
                     gps-entity-place="latitude: -34.782947; longitude: -56.0807658;"
                     
@@ -56,10 +64,10 @@
                     star
                     look-at="[gps-camera]"
                     animation-mixer="loop: repeat"
-                    gltf-model="#animated-asset"
+                    gltf-model="#amongus_verde"
                     scale="10 10 10"
                     gps-entity-place="latitude: -34.782947; longitude: -56.0807658;"
-                    
+                    position="1 0 0"
                 ></a-entity>
 
             
