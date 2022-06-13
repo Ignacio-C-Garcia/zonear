@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
 
 //Connect to MongoDB
 mongoose.connect(
-    process.env.DB_CONNECTION, 
+    "mongodb+srv://camila:Camila2611@cluster0.7atfl.mongodb.net/?retryWrites=true&w=majority", 
     { useNewUrlParser: true }, 
     () => console.log('Connected to MongoDB')
 );
