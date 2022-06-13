@@ -23,8 +23,16 @@
 
             <a-assets>
                 <a-asset-item
-                    id="animated-asset"
-                    src="assets/asset.glb"
+                    id="amongus_rojo"
+                    src="assets/amongus_rojo.glb"
+                ></a-asset-item>
+                <a-asset-item
+                    id="amongus_amarillo"
+                    src="assets/amongus_amarillo.glb"
+                ></a-asset-item>
+                <a-asset-item
+                    id="amongus_verde"
+                    src="assets/amongus_verde.glb"
                 ></a-asset-item>
             </a-assets>
 
@@ -33,15 +41,34 @@
             look-at="[gps-camera]"
             scale="50 50 50"
             gps-entity-place="latitude: -34.782947; longitude: -56.0807658;"
+            position="0 2 0"
           ></a-text>
                <a-entity
                     star
                     look-at="[gps-camera]"
                     animation-mixer="loop: repeat"
-                    gltf-model="#animated-asset"
+                    gltf-model="#amongus_rojo"
                     scale="10 10 10"
+                    gps-entity-place="latitude: -34.782947; longitude: -56.0801547;"
+                ></a-entity>
+            <a-entity
+                    star
+                    look-at="[gps-camera]"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#amongus_amarillo"
+                    scale="10 10 10"
+                    rotation="180 0 0"
                     gps-entity-place="latitude: -34.782947; longitude: -56.0807658;"
                     
+                ></a-entity>
+            <a-entity
+                    star
+                    look-at="[gps-camera]"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#amongus_verde"
+                    scale="10 10 10"
+                    rotation="180 0 0"
+                    gps-entity-place="latitude: -34.782947; longitude: -56.0815769;"
                 ></a-entity>
 
             
