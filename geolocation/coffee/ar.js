@@ -1,4 +1,4 @@
-AFRAME.registerComponent('obj_rojo', {
+/*AFRAME.registerComponent('obj_rojo', {
   schema: {
    default: ''
  },
@@ -28,3 +28,4 @@ AFRAME.registerComponent('obj_verde', {
    });
  }
 });
+*/
