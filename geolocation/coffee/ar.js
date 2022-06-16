@@ -1,5 +1,5 @@
 /*
-AFRAME.registerComponent('amongus_rojo', {
+AFRAME.registerComponent('obj_rojo', {
   schema: {
    default: ''
  },
@@ -9,7 +9,7 @@ AFRAME.registerComponent('amongus_rojo', {
    });
  }
 });
-AFRAME.registerComponent('amongus_amarillo', {
+AFRAME.registerComponent('obj_amarillo', {
   schema: {
    default: ''
  },
@@ -19,7 +19,7 @@ AFRAME.registerComponent('amongus_amarillo', {
    });
  }
 });
-AFRAME.registerComponent('amongus_verde', {
+AFRAME.registerComponent('obj_verde', {
   schema: {
    default: ''
  },
