@@ -1,86 +1,44 @@
-/* var options = {
-    enableHighAccuracy: true,
-    timeout: 5000,
-    maximumAge: 0
-  };
-  
-  function success(pos) {
-    var crd = pos.coords;
-  
-    console.log('Your current position is:');
-    console.log('Latitude : ' + crd.latitude);
-    console.log('Longitude: ' + crd.longitude);
-    console.log('More or less ' + crd.accuracy + ' meters.');
-  };
-  
-  function error(err) {
-    console.log("no geo")
-  };
-  navigator.geolocation.getCurrentPosition(success, error, options);
+AFRAME.registerComponent('amongus_rojo', {
 
-  AFRAME.registerComponent('star', {
+  init: function() {
+      const animatedMarker = document.querySelector("#animated-marker");
+      const aEntity = document.querySelector("#animated-model");
 
-    init: function() {
-        
+      // every click, we make our model grow in size :)
+      animatedMarker.addEventListener('click', function(ev, target){
+          const intersectedElement = ev && ev.detail && ev.detail.intersectedEl;
+          if (aEntity && intersectedElement === aEntity) {
+              window.location.href="http://zone-ar.rocks/nacho.html"
+          }
+      });
 }});
-*/
-/*
-var id, target, option;
 
-function success(pos) {
-  var crd = pos.coords;
+AFRAME.registerComponent('amongus_amarillo', {
 
-  if (target.latitude === crd.latitude && target.longitude === crd.longitude) {
-    console.log('Congratulation, you reach the target');
-    navigator.geolocation.clearWatch(id);
-  }
-};
+  init: function() {
+      const animatedMarker = document.querySelector("#animated-marker");
+      const aEntity = document.querySelector("#animated-model");
 
-function error(err) {
-  console.warn('ERROR(' + err.code + '): ' + err.message);
-};
+      // every click, we make our model grow in size :)
+      animatedMarker.addEventListener('click', function(ev, target){
+          const intersectedElement = ev && ev.detail && ev.detail.intersectedEl;
+          if (aEntity && intersectedElement === aEntity) {
+              window.location.href="http://zone-ar.rocks/cami.html"
+          }
+      });
+}});
 
-target = {
-  latitude : 0,
-  longitude: 0,
-}
+AFRAME.registerComponent('amongus_verde', {
 
-options = {
-  enableHighAccuracy: true,
-  timeout: 5000,
-  maximumAge: 0
-};
+  init: function() {
+      const animatedMarker = document.querySelector("#animated-marker");
+      const aEntity = document.querySelector("#animated-model");
 
-id = navigator.geolocation.watchPosition(success, error, options);
-console.log(id)
-*/
-
-AFRAME.registerComponent('checker', {
-  init: function () {
-    // `this.el` is the element.
-    // `object3D` is the three.js object.
-
-    // `rotation` is a three.js Euler using radians. `quaternion` also available.
-    navigator.geolocation.getCurrentPosition(function(location){
-      console.log(location)
-    })
-
-    // `position` is a three.js Vector3.
-    console.log(this.el.object3D.position);
-  }
-});
-
-AFRAME.registerComponent('checker', {
-  init: function () {
-    // `this.el` is the element.
-    // `object3D` is the three.js object.
-
-    // `rotation` is a three.js Euler using radians. `quaternion` also available.
-    window.addEventListener("deviceorientation",function(event) {
-      alpha = Math.round(event.alpha);
-      beta = Math.round(event.beta);
-      gamma = Math.round(event.gamma);
-    }, true);
-
-  }
-});
+      // every click, we make our model grow in size :)
+      animatedMarker.addEventListener('click', function(ev, target){
+          const intersectedElement = ev && ev.detail && ev.detail.intersectedEl;
+          if (aEntity && intersectedElement === aEntity) {
+              window.location.href="http://zone-ar.rocks/diego.html"
+          }
+      });
+}});
