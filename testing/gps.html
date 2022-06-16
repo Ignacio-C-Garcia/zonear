@@ -22,9 +22,11 @@
         >
         <a-camera checker gps-projected-camera rotation-reader gps-camera-position gps-camera-rotation></a-camera>
 
-        <a-scene>
-
-            <a-link href="https://www.youtube.com/watch?v=9BzKW3bXCBA" title="My Homepage" geometry="primitive: box"></a-link>
+            <a-assets>
+              <img id="homeThumbnail" src="./assets/Example.jpg">
+            </a-assets>
+            <a-entity  material="color: red"></a-entity>
+            <a-link href="https://www.youtube.com/watch?v=9BzKW3bXCBA" title="My Homepage" image="#homeThumbnail"></a-link>
 
             
         </a-scene>
