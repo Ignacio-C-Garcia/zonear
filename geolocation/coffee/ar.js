@@ -1,8 +1,8 @@
 AFRAME.registerComponent('amongus_rojo', {
 
   init: function() {
-      const animatedMarker = document.querySelector("#animated-marker");
-      const aEntity = document.querySelector("#animated-model");
+      const animatedMarker = document.querySelector("#asset_rojo");
+      const aEntity = document.querySelector("#amongus_rojo");
 
       // every click, we make our model grow in size :)
       animatedMarker.addEventListener('click', function(ev, target){
@@ -16,8 +16,8 @@ AFRAME.registerComponent('amongus_rojo', {
 AFRAME.registerComponent('amongus_amarillo', {
 
   init: function() {
-      const animatedMarker = document.querySelector("#animated-marker");
-      const aEntity = document.querySelector("#animated-model");
+    const animatedMarker = document.querySelector("#asset_amarillo");
+    const aEntity = document.querySelector("#amongus_amarillo");
 
       // every click, we make our model grow in size :)
       animatedMarker.addEventListener('click', function(ev, target){
@@ -31,8 +31,8 @@ AFRAME.registerComponent('amongus_amarillo', {
 AFRAME.registerComponent('amongus_verde', {
 
   init: function() {
-      const animatedMarker = document.querySelector("#animated-marker");
-      const aEntity = document.querySelector("#animated-model");
+    const animatedMarker = document.querySelector("#asset_verde");
+    const aEntity = document.querySelector("#amongus_verde");
 
       // every click, we make our model grow in size :)
       animatedMarker.addEventListener('click', function(ev, target){
