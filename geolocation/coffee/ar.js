@@ -1,3 +1,4 @@
+/*
 AFRAME.registerComponent('amongus_rojo', {
   schema: {
    default: ''
@@ -28,3 +29,4 @@ AFRAME.registerComponent('amongus_verde', {
    });
  }
 });
+*/
