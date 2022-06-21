@@ -20,7 +20,19 @@
             loading-screen="enabled: false;"
             arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
         >
-        <a-camera checker gps-projected-camera rotation-reader gps-camera-position gps-camera-rotation></a-camera>
+        <a-camera checker gps-projected-camera rotation-reader gps-camera-position gps-camera-rotation>
+            <a-marker
+                markerhandler
+                id="animated-marker"
+                type="pattern"
+                preset="kanji"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+            >
+
+            <a-image src="#image"></a-image>
+            </a-marker>
+        </a-camera>
 
             <a-assets>
                 <a-asset-item
@@ -45,17 +57,6 @@
                     
                 ></a-entity>
 
-                <a-marker
-                markerhandler
-                id="animated-marker"
-                type="pattern"
-                preset="kanji"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-            >
-
-            <a-image src="#image"></a-image>
-            </a-marker>
         </a-scene>
     </body>
 </html>
