@@ -24,55 +24,24 @@
 
             <a-assets>
                 <a-asset-item
-                    id="amongus_rojo"
-                    src="assets/amongus_rojo.glb"
-                ></a-asset-item>
-                <a-asset-item
-                    id="amongus_amarillo"
-                    src="assets/amongus_amarillo.glb"
-                ></a-asset-item>
-                <a-asset-item
-                    id="amongus_verde"
-                    src="assets/amongus_verde.glb"
+                    id="zonear_logo"
+                    src="assets/zonear.glb"
                 ></a-asset-item>
             </a-assets>
 
-               <a-entity
-                    id="obj_rojo"
-                    obj_rojo
-                    look-at="[gps-camera]"
-                    width="44"
-                    height="44"
-                    link="href: https://among-us.fandom.com/es/wiki/Rojo"
-                    animation-mixer="loop: repeat"
-                    gltf-model="#amongus_rojo"
-                    scale="24 24 24"
-                    gps-projected-entity-place="latitude: -34.782947; longitude: -56.0770000;"
-                ></a-entity>
+
             <a-entity
                     id="obj_amarillo"
                     obj_amarillo
-                    look-at="[gps-camera]"
+                    rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"
                     width="44"
                     height="44"
                     link="href: https://among-us.fandom.com/es/wiki/Amarillo"
                     animation-mixer="loop: repeat"
-                    gltf-model="#amongus_amarillo"
+                    gltf-model="#zonear_logo"
                     scale="24 24 24"
                     gps-projected-entity-place="latitude: -34.782947; longitude: -56.0800000;"
                     
-                ></a-entity>
-            <a-entity
-                    id="obj_verde"
-                    obj_verde
-                    look-at="[gps-camera]"
-                    width="44"
-                    height="44"
-                    link="href: https://among-us.fandom.com/es/wiki/Verde"
-                    animation-mixer="loop: repeat"
-                    gltf-model="#amongus_verde"
-                    scale="24 24 24"
-                    gps-projected-entity-place="latitude: -34.782947; longitude: -56.0830000;"
                 ></a-entity>
 
 
