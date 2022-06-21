@@ -27,6 +27,7 @@
                     id="zonear_logo"
                     src="assets/zonear.glb"
                 ></a-asset-item>
+                <img id="image" src="./assets/image.jpg">
             </a-assets>
 
             <a-entity
@@ -44,7 +45,18 @@
                     
                 ></a-entity>
 
+                <a-marker
+                markerhandler
+                id="animated-marker"
+                type="pattern"
+                preset="kanji"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+            >
 
+            <a-image src="#image"></a-image>
+            </a-box>
+            </a-marker>
         </a-scene>
     </body>
 </html>
