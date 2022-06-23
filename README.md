@@ -1,4 +1,4 @@
-![Zone-Ar_Logo](../img/zonear_logo_solid.png)
+![Zone-Ar_Logo](/img/zonear_logo_solid.png)
 # __ZONE AR - Discover the zone through Augmented Reality__
 
 ## Description
