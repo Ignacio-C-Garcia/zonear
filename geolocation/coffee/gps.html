@@ -14,64 +14,49 @@
     <body style="margin: 0; overflow: hidden;">
         <a-scene
         vr-mode-ui="enabled: false;"
+        cursor='rayOrigin: mouse; fuse: true; fuseTimeout: 0;'
             renderer="logarithmicDepthBuffer: true;"
             embedded
             loading-screen="enabled: false;"
-            arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
+            arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
         >
-        <a-camera checker gps-camera rotation-reader gps-camera-position gps-camera-rotation></a-camera>
+        <a-camera checker gps-projected-camera rotation-reader gps-camera-position gps-camera-rotation>
+            <a-marker
+                markerhandler
+                id="animated-marker"
+                type="pattern"
+                preset="kanji"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+            >
+
+            <a-image src="#image"></a-image>
+            </a-marker>
+        </a-camera>
 
             <a-assets>
                 <a-asset-item
-                    id="amongus_rojo"
-                    src="assets/amongus_rojo.glb"
+                    id="zonear_logo"
+                    src="assets/zonear.glb"
                 ></a-asset-item>
-                <a-asset-item
-                    id="amongus_amarillo"
-                    src="assets/amongus_amarillo.glb"
-                ></a-asset-item>
-                <a-asset-item
-                    id="amongus_verde"
-                    src="assets/amongus_verde.glb"
-                ></a-asset-item>
+                <img id="image" src="./assets/image.jpg">
             </a-assets>
 
-            <a-text
-            value="Impostor"
-            look-at="[gps-camera]"
-            scale="50 50 50"
-            gps-entity-place="latitude: -34.782947; longitude: -56.0807658;"
-            position="0 2 0"
-          ></a-text>
-               <a-entity
-                    star
-                    look-at="[gps-camera]"
-                    animation-mixer="loop: repeat"
-                    gltf-model="#amongus_rojo"
-                    scale="10 10 10"
-                    gps-entity-place="latitude: -34.782947; longitude: -56.0801547;"
-                ></a-entity>
             <a-entity
-                    star
-                    look-at="[gps-camera]"
+                    id="obj_amarillo"
+                    obj_amarillo
+                    rotation="0 0 0"
+                    animation="property: rotation; to: 0 -360 0; loop: true; dur: 8000"
+                    width="44"
+                    height="44"
+                    link="href: https://among-us.fandom.com/es/wiki/Amarillo"
                     animation-mixer="loop: repeat"
-                    gltf-model="#amongus_amarillo"
-                    scale="10 10 10"
-                    rotation="180 0 0"
-                    gps-entity-place="latitude: -34.782947; longitude: -56.0807658;"
+                    gltf-model="#zonear_logo"
+                    scale="1.5 1.5 1.5"
+                    gps-projected-entity-place="latitude: -34.788700; longitude: -56.078946;"
                     
                 ></a-entity>
-            <a-entity
-                    star
-                    look-at="[gps-camera]"
-                    animation-mixer="loop: repeat"
-                    gltf-model="#amongus_verde"
-                    scale="10 10 10"
-                    rotation="180 0 0"
-                    gps-entity-place="latitude: -34.782947; longitude: -56.0815769;"
-                ></a-entity>
 
-            
         </a-scene>
     </body>
 </html>
