@@ -14,7 +14,7 @@ function createEntity(Lat, Long, url) {
     Scene.appendChild(Entity);
   }
   
-axios.get('http://localhost:3002/api/get', {
+axios.get('44.207.32.201:3002/api/get', {
     responseType: 'json'
   })
     .then(function(res) {
