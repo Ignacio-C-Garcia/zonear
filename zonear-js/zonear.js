@@ -13,6 +13,7 @@ function createEntity(Lat, Long, url) {
     console.log("siiiiii")
     Scene.appendChild(Entity);
   }
+  
 axios.get('http://localhost:3002/api/get', {
     responseType: 'json'
   })
