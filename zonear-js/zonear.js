@@ -15,6 +15,7 @@ function createEntity(Lat, Long, url) {
   }
   
 axios.get('44.207.32.201:3002/api/get', {
+	crossDomain: true,
     responseType: 'json'
   })
     .then(function(res) {
