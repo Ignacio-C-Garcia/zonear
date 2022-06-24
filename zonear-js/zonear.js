@@ -14,7 +14,7 @@ function createEntity(Lat, Long, url) {
     Scene.appendChild(Entity);
   }
   
-axios.get('https://www.zone-ar.rocks:3002/api/get', {
+axios.get('http://44.207.32.201:3002/api/get', {
 	crossDomain: true,
     responseType: 'json'
   })
