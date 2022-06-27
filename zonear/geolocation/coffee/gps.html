@@ -10,27 +10,48 @@
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/three.js/build/ar.js"></script>
         <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
         <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
+        <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+        <script>
+            AFRAME.registerComponent('zonas', {
+                init: function() {
+                    this.el.addEventListener('click', () => {
+                        alert('zona!')
+                    });
+            }});
+            AFRAME.registerComponent('sabres', {
+                init: function() {
+                    this.el.addEventListener('click', () => {
+                        alert('sabre!')
+                    });
+            }});
+            AFRAME.registerComponent('jardin', {
+                init: function() {
+                    this.el.addEventListener('click', () => {
+                        alert('jardin!')
+                    });
+            }});
+        </script>
     </head>
 
     <body style="margin: 0; overflow: hidden;">
         <a-scene
             vr-mode-ui="enabled: false;"
-            cursor='rayOrigin: mouse; fuse: true; fuseTimeout: 0;'
+            cursor='rayOrigin: mouse; fuse: true; fuseTimeout: 500;'
             renderer="logarithmicDepthBuffer: true;"
             embedded
             loading-screen="enabled: false;"
             arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
 
-            <a-camera checker gps-projected-camera rotation-reader gps-camera-position gps-camera-rotation>
+            <a-camera checker gps-projected-camera rotation-reader>
+            <!--
                 <a-marker
                     markerhandler
                     id="animated-marker"
                     type="pattern"
                     preset="custom"
                     url="markers/jardin.patt"
-                    emitevents="true"
-                    cursor="fuse: false; rayOrigin: mouse;">
-                    <a-image src="#jardin"></a-image>
+                    >
+                    <a-image src="#jardin" jardin></a-image>
                 </a-marker>
 
                 <a-marker
@@ -39,10 +60,9 @@
                     type="pattern"
                     preset="custom"
                     url="markers/sabre.patt"
-                    emitevents="true"
-                    cursor="fuse: false; rayOrigin: mouse;">
-
-                    <a-image src="#sabre"></a-image>
+                    >
+                    
+                    <a-image src="#sabre" sabres></a-image>
                 </a-marker>
 
                 <a-marker
@@ -52,11 +72,11 @@
                     preset="custom"
                     url="markers/zonamerica.patt"
                     emitevents="true"
-                    cursor="fuse: false; rayOrigin: mouse;">
-
-                    <a-image src="#zonamerica"></a-image>
+                    >
+                
+                <a-image src="#zonamerica" zonas></a-image>
                 </a-marker>
-
+            -->
             </a-camera>
 
             <a-assets>
@@ -66,6 +86,17 @@
                 <img id="zonamerica" src="./assets/zonamerica.png">
             </a-assets>
 
+            <a-marker-camera type='pattern' url='markers/zonamerica.patt'>
+                <a-image src="./assets/zonamerica.png" zona></a-image>
+            </a-marker-camera>
+
+            <a-marker-camera type='pattern' url='markers/jardin.patt'>
+                <a-image src="#jardin" jardin></a-image>
+            </a-marker-camera>
+
+            <a-marker-camera type='pattern' url='markers/sabre.patt'>
+                <a-image src="./assets/sabre.jpg" sabre></a-image>
+            </a-marker-camera>
             <a-entity
                 id="obj_amarillo"
                 obj_amarillo
@@ -73,13 +104,12 @@
                 animation="property: rotation; to: 0 -360 0; loop: true; dur: 8000"
                 width="44"
                 height="44"
-                link="href: https://www.holbertonschool.com"
                 animation-mixer="loop: repeat"
                 gltf-model="#zonear_logo"
                 scale="1.5 1.5 1.5"
                 gps-projected-entity-place="latitude: -34.788700; longitude: -56.078946;">
             </a-entity>
-
+-->
         </a-scene>
     </body>
 </html>
