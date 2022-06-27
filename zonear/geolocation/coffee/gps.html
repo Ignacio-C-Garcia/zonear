@@ -13,49 +13,72 @@
 
     <body style="margin: 0; overflow: hidden;">
         <a-scene
-        vr-mode-ui="enabled: false;"
-        cursor='rayOrigin: mouse; fuse: true; fuseTimeout: 0;'
+            vr-mode-ui="enabled: false;"
+            cursor='rayOrigin: mouse; fuse: true; fuseTimeout: 0;'
             renderer="logarithmicDepthBuffer: true;"
             embedded
             loading-screen="enabled: false;"
-            arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
-        >
-        <a-camera checker gps-projected-camera rotation-reader gps-camera-position gps-camera-rotation>
-            <a-marker
-                markerhandler
-                id="animated-marker"
-                type="pattern"
-                preset="kanji"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-            >
+            arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
 
-            <a-image src="#image"></a-image>
-            </a-marker>
-        </a-camera>
+            <a-camera checker gps-projected-camera rotation-reader gps-camera-position gps-camera-rotation>
+                <a-marker
+                    markerhandler
+                    id="animated-marker"
+                    type="pattern"
+                    preset="custom"
+                    url="markers/marker_j.png"
+                    emitevents="true"
+                    cursor="fuse: false; rayOrigin: mouse;">
+
+                    <a-image src="#jardin"></a-image>
+                </a-marker>
+
+                <a-marker
+                    markerhandler
+                    id="animated-marker"
+                    type="pattern"
+                    preset="custom"
+                    url="markers/marker_s.png"
+                    emitevents="true"
+                    cursor="fuse: false; rayOrigin: mouse;">
+
+                    <a-image src="#sabre"></a-image>
+                </a-marker>
+
+                <a-marker
+                    markerhandler
+                    id="animated-marker"
+                    type="pattern"
+                    preset="custom"
+                    url="markers/marker_z.png"
+                    emitevents="true"
+                    cursor="fuse: false; rayOrigin: mouse;">
+
+                    <a-image src="#zonamerica"></a-image>
+                </a-marker>
+
+            </a-camera>
 
             <a-assets>
-                <a-asset-item
-                    id="zonear_logo"
-                    src="assets/zonear.glb"
-                ></a-asset-item>
-                <img id="image" src="./assets/image.jpg">
+                <a-asset-item id="zonear_logo" src="assets/zonear.glb"></a-asset-item>
+                <img id="jardin" src="./assets/jardin.jpg">
+                <img id="sabre" src="./assets/sabre.jpg">
+                <img id="zonamerica" src="./assets/zonamerica.png">
             </a-assets>
 
             <a-entity
-                    id="obj_amarillo"
-                    obj_amarillo
-                    rotation="0 0 0"
-                    animation="property: rotation; to: 0 -360 0; loop: true; dur: 8000"
-                    width="44"
-                    height="44"
-                    link="href: https://among-us.fandom.com/es/wiki/Amarillo"
-                    animation-mixer="loop: repeat"
-                    gltf-model="#zonear_logo"
-                    scale="1.5 1.5 1.5"
-                    gps-projected-entity-place="latitude: -34.788700; longitude: -56.078946;"
-                    
-                ></a-entity>
+                id="obj_amarillo"
+                obj_amarillo
+                rotation="0 0 0"
+                animation="property: rotation; to: 0 -360 0; loop: true; dur: 8000"
+                width="44"
+                height="44"
+                link="href: https://www.holbertonschool.com"
+                animation-mixer="loop: repeat"
+                gltf-model="#zonear_logo"
+                scale="1.5 1.5 1.5"
+                gps-projected-entity-place="latitude: -34.788700; longitude: -56.078946;">
+            </a-entity>
 
         </a-scene>
     </body>
