@@ -43,28 +43,7 @@
             arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
 
             <a-camera checker gps-projected-camera rotation-reader>
-            <!--
-                <a-marker
-                    markerhandler
-                    id="animated-marker"
-                    type="pattern"
-                    preset="custom"
-                    url="markers/jardin.patt"
-                    >
-                    <a-image src="#jardin" jardin></a-image>
-                </a-marker>
-
-                <a-marker
-                    markerhandler
-                    id="animated-marker"
-                    type="pattern"
-                    preset="custom"
-                    url="markers/sabre.patt"
-                    >
-                    
-                    <a-image src="#sabre" sabres></a-image>
-                </a-marker>
-
+            
                 <a-marker
                     markerhandler
                     id="animated-marker"
@@ -76,7 +55,7 @@
                 
                 <a-image src="#zonamerica" zonas></a-image>
                 </a-marker>
-            -->
+            
             </a-camera>
 
             <a-assets>
@@ -86,7 +65,7 @@
                 <img id="zonamerica" src="./assets/zonamerica.png">
             </a-assets>
 
-            <a-marker-camera type='pattern' url='markers/zonamerica.patt'>
+            <!-- <a-marker-camera type='pattern' url='markers/zonamerica.patt'>
                 <a-image src="./assets/zonamerica.png" zona></a-image>
             </a-marker-camera>
 
@@ -96,7 +75,8 @@
 
             <a-marker-camera type='pattern' url='markers/sabre.patt'>
                 <a-image src="./assets/sabre.jpg" sabre></a-image>
-            </a-marker-camera>
+            </a-marker-camera> -->
+
             <a-entity
                 id="obj_amarillo"
                 obj_amarillo
@@ -109,7 +89,6 @@
                 scale="1.5 1.5 1.5"
                 gps-projected-entity-place="latitude: -34.788700; longitude: -56.078946;">
             </a-entity>
--->
         </a-scene>
     </body>
 </html>
