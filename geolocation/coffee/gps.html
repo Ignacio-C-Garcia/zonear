@@ -20,17 +20,6 @@
             arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
         >
         <a-camera checker gps-camera="simulateLatitude: -34.78962608221375; simulateLongitude: -56.07935828156771;">
-            <a-marker
-                markerhandler
-                id="animated-marker"
-                type="pattern"
-                preset="kanji"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-            >
-
-            <a-image src="#image"></a-image>
-            </a-marker>
         </a-camera>
 
             <a-assets>
@@ -54,7 +43,7 @@
                     gps-entity-place="latitude: -34.7894674825539; longitude: -56.0792372468859;"
                     
                 >
-                <a-entity geometry="primitive: cylinder; height: 1; radius: 0.5;" rotation="90 0 0" animation="property: rotation; to: 90 360 0; loop: true; dur: 1000"></a-entity>
+                <a-entity geometry="primitive: sphere; radius: 2" url="./assets/sabre_logo.jpg" animation="property: rotation; to: 90 360 0; loop: true; dur: 1000"></a-entity>
             </a-entity>
 
         </a-scene>
