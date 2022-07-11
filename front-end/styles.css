@@ -9,14 +9,36 @@ body {
     font-family: Optima, Arial, Helvetica, sans-serif;
 }
 header {
-    background-color: #f5f5f5;
+    background-image: url('../img/zonamap50.png');
     text-align: center;
     position: sticky;
     top: 0%;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 header img {
-    width: 50%;
+    height: 75px;
+}
+header ul {
+    content: "";
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    text-align: justify;
+    margin-left: -10%;
+}
+header ul li .btn {
+    border-radius: 10%;
+    background-color: #b1feb16b;
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+header .btn {
+    color: #f5f5f5;
+    font-size: 20px;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
 }
 .person_header {
     background-color: #f5f5f5;
@@ -26,19 +48,10 @@ header img {
 .person_header img{
     width: 50%;
 }
-@media only screen and (orientation: landscape) {
-    main {
-        display: flex;
-        flex: auto;
-        flex-direction: row;
-    }
-}
-@media only screen and (orientation: portrait) {
-    main {
-        display: flex;
-        flex: auto;
-        flex-direction: column;
-    }
+main {
+    display: flex;
+    flex: auto;
+    flex-direction: column;
 }
 article {
     text-align: center;
@@ -48,6 +61,7 @@ article {
     background-color: #f5f5f5;
     border-radius: 5px;
     padding: 20px;
+    margin-bottom: 50px;
 }
 article img {
     width: 40%;
@@ -68,10 +82,25 @@ aside {
     flex-wrap: wrap;
 }
 .flex-container > div {
-    width: 50%;
+    border-radius: 10%;
+    background-color: #b1feb16b;
+    padding-top: 10px;
+    margin: auto;
+    margin-top: 10px;
+    width: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+@media only screen and (orientation: portrait) {
+    .flex-container > div {
+        font-size: small;
+    }
+}
+@media only screen and (orientation: landscape) {
+    .flex-container > div {
+        font-size: large;
+    }
 }
 footer {
     background-color: #f5f5f5;
@@ -83,15 +112,25 @@ personal {
     flex-direction: column;
     align-items: center;
 }
-.personal > main {
-    display: flex;
-    flex-direction: row;
+@media only screen and (orientation: landscape) {
+    .personal > main {
+        display: flex;
+        flex: auto;
+        flex-direction: column;
+    }
+}
+@media only screen and (orientation: portrait) {
+    .personal > main {
+        display: flex;
+        flex: auto;
+        flex-direction: row;
+    }
 }
 .personal .main > img {
     text-align: center;
     display: flex;
     flex-direction: row;
-    width: 30%;
+    width: 100%;
     background-color: #f5f5f5;
     border-radius: 5px;
     padding: 20px;
